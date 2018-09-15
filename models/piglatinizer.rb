@@ -6,14 +6,7 @@ class PigLatinizer
   def piglatinize(string)
     array = string.split("")
     isolated_first_element = array[0]
-      if array[0] =~ /[aioAIO]/
-        array.shift
-        array << isolated_first_element
-        array << "w"
-        array << "a"
-        array << "y"
-        array.join
-      elsif array[0] =~ /[uU]/ || array[0] =~ /[eE]/
+      if array[0] =~ /[aeiouAEIOU]/
         string + "way"
       else
         first_vowel = array.find_index { |e| e.match( /[aeiouAEIOU]/ ) } #returns the index of the first vowel
