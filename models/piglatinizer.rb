@@ -7,6 +7,7 @@ class PigLatinizer
     word_array = string.split(" ")
     new_array = word_array.map do |word|
       new_word = piglatinize_word(word)
+      binding.pry
     end
     new_array.join(" ")
   end
