@@ -7,6 +7,8 @@ class App < Sinatra::Base
   end
 
   post '/piglatinize' do
+    params
+    binding.pry
   end 
 
 end
