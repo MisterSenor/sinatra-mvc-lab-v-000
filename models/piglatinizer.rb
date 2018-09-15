@@ -5,7 +5,6 @@ class PigLatinizer
 
   def piglatinize(string)
     array = string.split("")
-    isolated_first_element = array[0]
       if array[0] =~ /[aeiouAEIOU]/
         string + "way"
       else
