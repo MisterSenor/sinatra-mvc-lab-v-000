@@ -13,13 +13,13 @@ class PigLatinizer
         array << "a"
         array << "y"
         array.join
-      elsif array[0] =~ /[uU]/
+      elsif array[0] =~ /[uU]/ || array[0] =~ /[eE]/
         string + "way"
       elsif array[0] =~ /[eE]/
         string + "way"
       else
         first_vowel = array.find_index { |e| e.match( /[aeiouAEIOU]/ ) } #returns the index of the first vowel
-        first_chunk = array[0...first_vowel].join("")
+        first_chunk = array[0...first_vowel].join("") #This first_chunk will be a consonant cluster
         last_chunk = string.slice(first_vowel..-1)
         last_chunk + first_chunk + "a" + "y"
       end
