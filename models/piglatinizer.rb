@@ -5,7 +5,7 @@ class PigLatinizer
 
   def piglatinize(string)
     piglatinize_word(string)
-      array = string.split(" ")
+      # array = string.split(" ")
   end
 
     def piglatinize_word(word)
@@ -18,8 +18,8 @@ class PigLatinizer
           last_chunk = word.slice(first_vowel..-1)
           last_chunk + first_chunk + "a" + "y"
         end
-    end 
-      
+    end
+
 
 
 end #ends the class
